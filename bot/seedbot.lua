@@ -232,22 +232,15 @@ function create_config( )
     "antilink",
     "admin"
     },
-    sudo_users = {37194141,174665816,175531746,},--Sudo users
+    sudo_users = {146340607,163180332,156907037,134177004},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[The Anti Spammer Zeus V2
- 
- مديران ربات: 
-@Larnog
-@Ananymous0
-@Redteam_02_00
-
-  تشکر ويژه از:
-Blackwolf_admin
-Amincmp  
-
-خبرنامه ربات:
-@Zeus_ch
+    about_text = [[SPARTACUS Robot Ver 3.7
+AntispamBot : @tele_sparta
+Our Channel : @sparta_antispam
+Admins
+@blackhacker666 [Developer]
+http://uupload.ir/files/mxct_tele_spartacus.jpg
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -324,115 +317,120 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
-
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-return group id or user id
-
-!help
-
-!bot on
-!bot off
-On and off bot in youre group
-
-!lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
-
-
-*Only owner and mods can add bots in group
-
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
-
+لیست دستورات :
+__________________________
+kick [آیدی،کد،ریپلای] 
+شخص مورد نظر از گروه اخراج ميشود.
+—-------------------
+ban [آیدی،کد،ریپلای]
+شخص مورد نظر از گروه تحریم میشود
+—-------------------
+unban[کد]
+شخص مورد نظر از تحریم خارج ميشود
+—-------------------
+banlist
+لیست افرادی که از گروه تحریم شده اند
+—-------------------
+kickme : ترک گروه
+—------------------------------—
+filter set [کلمه]
+فیلتر کردن کلمه مورد نظر
+—----------------------
+filter warn [کلمه]
+اخطار گرفتن برای کلمه مورد نظر
+—------------------------------—
+filter set [کلمه]
+فیلتر کردن کلمه مورد نظر
+—----------------------
+filterlist : لیست کلمه های فیلتر شده
+—----------------------
+owner : نمایش آیدی مدیر گروه
+—-------------------
+modlist : لیست کمک مدیرها
+—-------------------
+promote [ریپلای،یوزرنیم]
+اضافه کردن کمک مدیر
+—-------------------
+demote [ریپلای،یوزرنیم]
+حذف کردن کمک مدیر
+—-------------------
+lock [member|name|bots|flood]
+قفل کردن :اعضا،نام،رباتها،اسپم
+—----------------------
+unlock [member|name|photo|bots]
+آزاد کردن :اعضا،نام،عکس،ربات
+—------------------------------—
+setphoto : اضافه کردن وقفل عکس گروه
+—----------------------
+setname [نام]
+عوض کردن نام گروه
+—------------------------------—
+about : درباره گروه
+—----------------------
+rules : قوانین گروه
+—----------------------
+set rules <متن>
+متن قوانین گروه
+—----------------------
+set about <متن> 
+متن درباره گروه
+—------------------------------—
+settings : تنظیمات گروه
+—------------------------------—
+newlink : تعویض لینک و ارسال درگروه
+—----------------------
+newlinkpv :تعویض لینک و ارسال در چت خصوصی 
+—------------------------------—
+link : لینک گروه
+—------------------------------—
+linkpv : ارسال لینک در چت خصوصی
+—------------------------------—
+setflood [تعداد]
+محدودیت تعداد اسپم
+—------------------------------—
+set [کلمه] <text>
+ذخیره کلمه و جمله برگشت
+—----------------------
+get [کلمه]
+باز گردانی جمله ای که برای کلمه ذخیره کردید
+—------------------------------—
+clean [modlist|rules|about]
+پاکسازی مدیرها/قوانین/موضوع
+—------------------------------—
+info [ریپلای]
+بازگرداندن اطلاعات شخص
+—----------------------
+id [یوزرنیم]
+بازگرداندن کد آیدی
+—----------------------
+id : بازگرداندن کد گروه یا افراد
+—------------------------------—
+log : اطلاعات گروه
+—----------------------
+stats : آمار در پیام ساده
+—----------------------
+who : لیست اعضا
+—------------------------------—
+tex <متن>
+تبدیل متن به تصویر
+—------------------------------—
+meme list : لیست انیمیشن های موجود
+—----------------------
+ساخت انیمیشن:
+meme [title] [text_up] [text_down]
+[موضوع] [متن بالا] [متن پایین]
+—------------------------------—
+echo <متن> : تکرار متن
+—------------------------------—
+plugins enable 'plugin' chat
+فعال کردن ابزار در گروه
+—----------------------
+plugins disable 'plugin' chat
+غیر فغال کردن ابزار در گروه
+—------------------------------—
+tagall : صدا کردن افراد گروه
+—---------------------—
+نیاز نیست از '!' و '/' استفاده کنید*
 ]]
   }
   serialize_to_file(config, './data/config.lua')
