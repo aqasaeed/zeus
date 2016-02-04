@@ -91,10 +91,10 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'zeus' then -- Put everything you like :)
+  if matches[1]:lower() == 'spartacus' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /zeus ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used /spartacus ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
@@ -120,7 +120,7 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "zeus" then -- Put everything you like :)
+    if matches[2] == "spartacus" then -- Put everything you like :)
       if not is_admin(msg) then
         return "For admins only !"
       else
@@ -141,8 +141,8 @@ return {
     "^[!/]([Ss]tats)$",
     "^[!/]([Ss]tatslist)$",
     "^[!/]([Ss]tats) (group) (%d+)",
-    "^[!/]([Ss]tats) (zeus)",-- Put everything you like :)
-		"^[!/]([Zz]eus)"-- Put everything you like :)
+    "^[!/]([Ss]tats) (spartacus)",-- Put everything you like :)
+		"^[!/]([Ss]partacus)"-- Put everything you like :)
     }, 
   run = run
 }
